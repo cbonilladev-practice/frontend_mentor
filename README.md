@@ -9,3 +9,6 @@ Learned about these challenges recently and wanted to try them. Pretty fun, tbh.
 * Replicating UI from image.
 * Parsing through pre-made assets. 
 
+# Links
+
+1. Order Summary Component: [ordersummaryforfm.netlify.app](ordersummaryforfm.netlify.app)
