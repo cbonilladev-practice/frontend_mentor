@@ -11,4 +11,4 @@ Learned about these challenges recently and wanted to try them. Pretty fun, tbh.
 
 # Links
 
-1. Order Summary Component: [ordersummaryforfm.netlify.app](ordersummaryforfm.netlify.app)
+1. Order Summary Component: [ordersummaryforfm.netlify.app](https://ordersummaryforfm.netlify.app/)
