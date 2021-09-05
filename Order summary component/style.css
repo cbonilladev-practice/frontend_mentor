@@ -1,0 +1,184 @@
+:root {
+	--Pale-blue: hsl(225, 100%, 94%);
+	--Bright-blue: hsl(245, 75%, 52%);
+	--Very-pale-blue: hsl(225, 100%, 98%);
+	--Desaturated-blue: hsl(224, 23%, 55%);
+	--Dark-blue: hsl(223, 47%, 23%);
+	--Dark-pale-blue: hsl(223, 15%, 54%);
+	--Hover-blue: hsl(245, 83%, 68%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+	background-image: url('/images//pattern-background-desktop.svg');
+	background-repeat: repeat-x;
+	background-color: var(--Pale-blue);
+	/* The second parameter dictates the height of the background image.*/
+	background-size: 100% 30em;
+	background-position: top;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1rem;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.card-container {
+	background-color: white;
+	max-width: 30em;
+	border-radius: 20px;
+	overflow: hidden;
+	box-shadow: 0 1px 1px rgba(0, 21, 139, 0.025), 0 2px 2px rgba(0, 77, 192, 0.025), 0 4px 4px rgba(0, 22, 218, 0.025), 0 8px 8px rgba(0, 47, 202, 0.025), 0 16px 16px rgba(0, 42, 180, 0.025), 0 32px 32px rgba(0, 28, 119, 0.025);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* margin: 3em; */
+}
+
+.hero_image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.text {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	padding: 2.5rem 3rem 3rem 2.5rem;
+}
+
+h2 {
+	margin: 0 .5rem 1rem .5rem;
+	font-size: 2em;
+	color: var(--Dark-blue);
+	font-weight: 900;
+}
+
+.information {
+	text-align: center;
+	line-height: 1.5em;
+	color: var(--Dark-pale-blue);
+	margin: 0 3em 1.5em 3em;
+}
+
+.plan_div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: var(--Very-pale-blue);
+	padding: 1.5em;
+	border-radius: 5%;
+	box-sizing: border-box;
+}
+
+.left_plan {
+	display: flex;
+	align-items: center;
+	text-align: left;
+}
+
+.left_plan>div {
+	margin-left: 20px;
+}
+
+.plan_div>a {
+	font-weight: 900;
+	color: var(--Bright-blue);
+}
+
+.plan_div>a:active {
+	color: var(--Hover-blue);
+}
+
+.plan_div>a:hover {
+	color: var(--Hover-blue);
+	text-decoration: none;
+}
+
+.plan_div {
+	margin-bottom: 2em;
+}
+
+.pricing>p {
+	line-height: 1.5em;
+	color: var(--Dark-pale-blue)
+}
+
+.payment_button {
+	border: none;
+	background-color: var(--Bright-blue);
+	color: white;
+	padding: 1em;
+	display: block;
+	border-radius: 10px;
+	font-weight: 900;
+	box-shadow: 0 1px 1px rgba(76, 0, 139, 0.05), 0 2px 2px rgba(99, 0, 192, 0.05), 0 4px 4px rgba(120, 0, 218, 0.05), 0 8px 8px rgba(44, 0, 202, 0.05), 0 16px 16px rgba(12, 0, 180, 0.05), 0 32px 32px rgba(2, 0, 119, 0.05);
+	cursor: pointer;
+	margin-bottom: 1.5em;
+}
+
+.payment_button:hover {
+	background-color: var(--Hover-blue)
+}
+
+.cancel {
+	font-weight: 900;
+	font-size: 1em;
+	line-height: 1.5em;
+	text-decoration: none;
+	color: var(--Desaturated-blue)
+}
+
+.cancel:hover {
+	color: var(--Dark-blue)
+}
+
+.attribution {
+	position: absolute;
+	bottom: 0px;
+	margin-bottom: 0.5em;
+	font-size: 12px;
+	color: var(--Dark-blue)
+}
+
+.attribution>a {
+	font-size: 12px;
+	font-weight: bold;
+	color: var(--Dark-blue);
+	text-decoration: none;
+}
+
+@media screen and (max-width: 460px) {
+	.text {
+		padding: 2rem 1.5rem 2rem 1.5rem;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	.information {
+		font-size: 1em;
+		line-height: 1.25em;
+		margin: 0 .75em 1.5em .75em;
+	}
+	.plan_div>a {
+		font-size: .85em;
+	}
+	.pricing>* {
+		font-size: .85em;
+	}
+}
