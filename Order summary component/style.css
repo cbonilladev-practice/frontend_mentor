@@ -181,4 +181,7 @@ h2 {
 	.pricing>* {
 		font-size: .85em;
 	}
+	body {
+		background-image: url('/images//pattern-background-desktop.svg');
+	}
 }
