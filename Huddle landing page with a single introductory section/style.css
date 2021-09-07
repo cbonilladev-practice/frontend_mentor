@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+	--Violet: hsl(257, 40%, 49%);
+	--Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url("./images/bg-desktop.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	min-height: 100vh;
+	background-color: var(--Violet);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: white;
+	font-family: "Poppins";
+	font-size: 1.25em;
+}
+
+.container {
+	margin: auto;
+	width: 90vw;
+	max-width: 100%;
+}
+
+main {
+	display: flex;
+}
+
+.left_section {
+	flex: 1.5;
+	margin-right: 20px;
+}
+
+.left_section > img {
+	width: 1000px;
+}
+
+.right_section {
+	flex: 1;
+	margin-left: 20px;
+}
+
+.left_section > img {
+	max-width: 100%;
+}
+
+a {
+	color: black;
+}
+
+ul { 
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+ul > li > a {
+	border: 1px solid white;
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	color: white;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+

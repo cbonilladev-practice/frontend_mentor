@@ -8,6 +8,7 @@ Learned about these challenges recently and wanted to try them. Pretty fun, tbh.
 
 * Replicating UI from image.
 * Parsing through pre-made assets. 
+* Reviewing vanilla CSS and JS. 
 
 # Links
 
