@@ -14,3 +14,4 @@ Learned about these challenges recently and wanted to try them. Pretty fun, tbh.
 
 1. Order Summary Component: [ordersummaryforfm.netlify.app](https://ordersummaryforfm.netlify.app/)
 2. Stats Preview Card Component: [statspreviewcardforfm.netlify.app](https://statspreviewcardforfm.netlify.app/)
+3. Huddle landing page with a single introductory section: [huddlelandingpageforfm.netlify.app](https://huddlelandingpageforfm.netlify.app/)
