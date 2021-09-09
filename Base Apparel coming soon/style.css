@@ -188,6 +188,13 @@ nav {
 		background-image: var(--Gradient-Background);
 	}
 
+	.input > .error {
+		position: absolute;
+		top: .75em;
+		left: 19em;
+		display: none;
+	}	
+
 	.right_side {
 		display: none;
 	}
