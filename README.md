@@ -16,3 +16,4 @@ Learned about these challenges recently and wanted to try them. Pretty fun, tbh.
 2. Stats Preview Card Component: [statspreviewcardforfm.netlify.app](https://statspreviewcardforfm.netlify.app/)
 3. Huddle landing page with a single introductory section: [huddlelandingpageforfm.netlify.app](https://huddlelandingpageforfm.netlify.app/)
 4. Four card feature section: [fourcardfeaturesectionforfm.netlify.app](https://fourcardfeaturesectionforfm.netlify.app/)
+5. Base Apparel coming soon: [baseapparelcomingsoonforfm.netlify.app](https://baseapparelcomingsoonforfm.netlify.app/)
