@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+	--Red: hsl(0, 100%, 74%);
+	--Green: hsl(154, 59%, 51%);
+	--Blue: hsl(248, 32%, 49%);
+	--Dark-Blue: hsl(249, 10%, 26%);
+	--Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+	font-size: 16px;
+
+	display: flex;
+	flex-direction: column;
+
+	font-family: "Poppins";
+}
+
+h1,p {
+	margin: 0;
+}
+
+main {
+	height: 100%;
+	background-image: url("./images/bg-intro-desktop.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--Red)
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.form_input {
+	display: flex;
+	flex-direction: column;
+}
+
+.left_side_text {
+	width: 540px;
+	padding: 1em;
+	color: white;
+}
+
+.left_side_text > h1 {
+	font-size: 3em;
+	line-height: 1em;
+	margin-bottom: .5em;
+}
+
+.left_side_text > p {
+	font-weight: 500;
+	font-size: 1em;
+}
+
+.right_side_card {
+	width: 540px;
+	padding: 2em;
+	margin: 1em;
+}
+
+.right_side_card > .top_div {
+	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 3.5em;
+	background-color: var(--Blue);
+	color: white;
+
+	border-radius: 5px;
+	margin-bottom: 1.5em;
+	font-weight: 400;
+	
+	box-shadow: 0 10px 0 0 hsl(249, 10%, 26%, 0.2);
+}
+
+.right_side_card > .top_div > p > span {
+	font-weight: 700;
+}
+
+.right_side_card > .card_input {
+	background-color: white;
+	padding: 2em;
+	
+	border-radius: 5px;
+	box-shadow: 0 10px 0 0 hsl(249, 10%, 26%, 0.2);
+}
+
+.right_side_card > .card_input > .form_input > small:last-child {
+	font-size: .65em;
+	margin-top: 1em;
+	text-align: center;
+
+	font-weight: 600;
+	color: var(--Grayish-Blue)
+}
+
+.right_side_card > .card_input > .form_input > small {
+	
+}
+
+.right_side_card > .card_input > .form_input > small > span {
+	color: var(--Red)
+}
+
+.right_side_card > .card_input > .form_input > input {
+	margin-bottom: 1em;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+	padding: 1em 2em;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+
+	font-weight: 700;
+	font-size: 1em;
+}
+
+input:focus {
+	outline: none;
+	border: 1px solid var(--Dark-Blue);
+}
+
+button {
+	padding: 1em;
+	border-radius: 5px;
+	border: none;
+	background-color: var(--Green);
+
+	cursor: pointer;
+	color: white;
+	font-family: "Poppins";
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
