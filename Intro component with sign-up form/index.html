@@ -38,15 +38,27 @@
           </p>
         </div>
         <div class="card_input">
-          <form class="form_input" autocomplete="off">
-            <input type="text" name="first_name" id="first_name" placeholder="First Name">
-            <small >First Name cannot be empty</small>
-            <input type="text" name="last_name" id="last_name" placeholder="Last Name ">
-            <small >First Name cannot be empty</small>
-            <input type="email" name="email_address" id="email_address" placeholder="Email Address">
-            <small >First Name cannot be empty</small>
-            <input type="password" name="password" id="password" placeholder="Password">
-            <small >First Name cannot be empty</small>
+          <form class="form_input" id="form_input" autocomplete="off">
+            <div class="form_control">
+              <input class="" type="text" name="first_name" id="first_name" placeholder="First Name" />
+              <img class="" src="images/icon-error.svg" alt="error icon" />
+              <small class=""><i>First Name cannot be empty</i></small>
+            </div>
+            <div class="form_control">
+              <input class="" type="text" name="last_name" id="last_name" placeholder="Last Name " />
+              <img class="" src="images/icon-error.svg" alt="error icon" />
+              <small class=""><i>Last name cannot be empty</i></small>
+            </div>
+            <div class="form_control">
+              <input class="" type="email" name="email_address" id="email_address" placeholder="Email Address" />
+              <img class="" src="images/icon-error.svg" alt="error icon" />
+              <small class=""><i>Looks like this is not an email</i></small>
+            </div>
+            <div class="form_control">
+              <input class="" type="password" name="password" id="password" placeholder="Password" />
+              <img class="" src="images/icon-error.svg" alt="error icon" />
+              <small class=""><i>Password cannot be empty</i></small>
+            </div>
             <button>
               Claim your free trial
             </button>

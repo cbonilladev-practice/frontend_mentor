@@ -86,7 +86,7 @@ section {
 	margin-bottom: 1.5em;
 	font-weight: 400;
 	
-	box-shadow: 0 10px 0 0 hsl(249, 10%, 26%, 0.2);
+	box-shadow: 0 7.5px 0 0 hsl(249, 10%, 26%, 0.2);
 }
 
 .right_side_card > .top_div > p > span {
@@ -98,10 +98,17 @@ section {
 	padding: 2em;
 	
 	border-radius: 5px;
-	box-shadow: 0 10px 0 0 hsl(249, 10%, 26%, 0.2);
+	box-shadow: 0 7.5px 0 0 hsl(249, 10%, 26%, 0.2);
 }
 
-.right_side_card > .card_input > .form_input > small:last-child {
+.right_side_card > .card_input > .form_input > .form_control {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.right_side_card > .card_input > .form_input > small {
 	font-size: .65em;
 	margin-top: 1em;
 	text-align: center;
@@ -110,16 +117,45 @@ section {
 	color: var(--Grayish-Blue)
 }
 
-.right_side_card > .card_input > .form_input > small {
-	
+.right_side_card > .card_input > .form_input > .form_control > small {
+	display: none;
+}
+
+.right_side_card > .card_input > .form_input > .form_control.error > small {
+	display: block;
+	margin-bottom: 1em;
+	align-self: flex-end;
+
+	font-weight: 500;
+
+	color: var(--Red);
 }
 
 .right_side_card > .card_input > .form_input > small > span {
 	color: var(--Red)
 }
 
-.right_side_card > .card_input > .form_input > input {
+.right_side_card > .card_input > .form_input > .form_control > img {
+	display: none;
+}
+
+.right_side_card > .card_input > .form_input > .form_control.error > img {
+	width: 1.5em;
+	position: absolute;
+	top: 1em;
+	right: 2em;
+
+	display: block;
+} 
+
+.right_side_card > .card_input > .form_input > .form_control > input {
 	margin-bottom: 1em;
+}
+
+.right_side_card > .card_input > .form_input > .form_control.error > input {
+	margin-bottom: .5em;
+
+	border-color: var(--Red);
 }
 
 input[type="text"], 
@@ -131,6 +167,8 @@ input[type="password"] {
 
 	font-weight: 700;
 	font-size: 1em;
+
+	width: 100%;
 }
 
 input:focus {
@@ -141,7 +179,7 @@ input:focus {
 button {
 	padding: 1em;
 	border-radius: 5px;
-	border: none;
+	border: 1px solid hsl(154, 58%, 45%);
 	background-color: var(--Green);
 
 	cursor: pointer;
@@ -151,3 +189,75 @@ button {
 	text-transform: uppercase;
 }
 
+@media screen and (max-width: 850px) {
+	body {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+	}
+
+	main {
+		height: 100%;
+	}
+
+	section {
+		flex-direction: column;
+	}
+
+	.left_side_text {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+
+		padding: 2.5em;
+
+		width: 100%;
+	}
+
+	.left_side_text > h1 {
+		font-size: 1.5em;
+		width: 5em;
+		text-align: center;
+		margin-bottom: 1em;
+		
+		width: 100%;
+	}
+	
+	.left_side_text > p {
+		font-size: .75em;
+		line-height: 1.775em;
+
+		text-align: center;
+	}
+
+	.right_side_card {
+		padding: 0;
+		margin: 0;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	
+	.top_div {
+		width: 300px;
+		padding: 2em;
+	}
+
+	.top_div > p {
+		text-align: center;
+		font-size: .75em;
+	}
+
+	.right_side_card > .card_input {
+		width: 300px;
+		padding: 1.5em;
+	}
+
+	input[type="text"], 
+	input[type="email"], 
+	input[type="password"] {
+		font-size: .75em;
+	}
+}
