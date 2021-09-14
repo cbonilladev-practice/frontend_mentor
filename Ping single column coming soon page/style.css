@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+	--Blue: hsl(223, 87%, 63%);
+	--Pale-Blue: hsl(223, 100%, 88%);
+	--Light-Red: hsl(354, 100%, 66%);
+	--Gray: hsl(0, 0%, 59%);
+	--Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100vh;
+
+	font-size: 20px;
+
+	font-family: "Libre Franklin"
+}
+
+section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	flex-direction: column;
+
+	padding: 3em;
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+	display: flex;
+
+	margin: 0;
+	padding: 0;
+}
+
+.logo {
+	width: 4em;
+}
+
+h2 {
+	font-size: 2rem;
+
+	margin: 1em 0 0 0;
+
+	color: var(---Gray);
+}
+
+h2 > span { 
+	font-weight: 300;
+}
+
+p {
+	margin: 1em 0 0 0;
+	font-size: .775em;
+
+	color: var(---Gray);
+}
+
+form {
+	width: 750px;
+
+	display: flex;
+	justify-content: center;
+
+	margin: 2em 0 0 0;
+	position: relative;
+}
+
+form > input {
+	padding: 1em 0 1em 1.5em;
+	border-radius: 25px;
+
+	border: 1px solid var(--Pale-Blue);
+	font-family: "Libre Franklin";
+	/* font-weight: 600; */
+	color: var(---Gray);
+
+	width: 50%;
+}
+
+form.error > input {
+	border-color: var(--Light-Red);
+}
+
+form > input::placeholder {
+	color: var(--Pale-Blue);
+}
+
+form > input:focus {
+	outline: none;
+}
+
+form > button {
+	background-color: var(--Blue);
+	color: white;
+
+	font-family: "Libre Franklin";
+	font-weight: 600;
+	padding: 1em 4em;
+
+	margin-left: 1em;
+	border: 1px solid var(--Blue);
+	border-radius: 30px;
+
+	box-shadow: 0 .5em 1em 0 hsl(223, 87%, 63%, 0.25);
+
+	cursor: pointer;
+}
+
+form > button:hover {
+	background-color: hsl(223, 82%, 70%)
+}
+
+form > small {
+	display: none;
+}
+
+form.error > small {
+	display: block;
+
+	position: absolute;
+	bottom: -2em;
+	left: 10em;
+	font-size: .55em;
+
+	color: var(--Light-Red);
+}
+
+.dashboard {
+	width: 26em;
+	margin: 4em 0 0 0;
+}
+
+.social_media {
+	padding-top: 5em;
+}
+
+.social_media > button {
+	color: var(--Blue);
+	margin: .5em;
+
+	font-size: .65em;
+
+	border: 1px solid var(--Pale-Blue);
+	border-radius: 50%;
+	display: inline-block;
+
+	width: 2em;
+	height: 2em;
+
+	background-color: transparent;
+
+	cursor: pointer;
+}
+
+.social_media > button:hover {
+	background-color: var(--Blue);
+
+	color: white;
+}
+
+section > small {
+	font-size: .55em;
+
+	margin-top: 2em;
+	color: var(--Gray)
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		position: fixed;
+		width: 100%;
+	}
+
+	section {
+		padding: 4em 0 0 0;
+	}
+
+	.logo {
+		width: 3em;
+	}
+
+	form {
+		width: 15em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		flex-direction: column;
+	}
+
+	form > input {
+		width: 100%;
+		padding: 1em 0 1em 2em;
+
+		font-size: .6em;
+	}
+
+	form > button {
+		width: 100%;
+		margin: 1em 0 0 0;
+
+		font-size: .65em;
+	}
+
+	h2 {
+		font-size: 1em;
+	}
+
+	.dashboard {
+		width: 15em;
+
+		margin-top: 2em;
+	}
+
+	form.error > small {
+		position: static;
+		margin-top: .5em;
+
+		padding-top: .5em;
+	}
+
+	.social_media {
+		position: fixed;
+		bottom: 4em;
+	}
+
+	section > small {
+		position: fixed;
+		bottom: 3em;
+	}
+}
