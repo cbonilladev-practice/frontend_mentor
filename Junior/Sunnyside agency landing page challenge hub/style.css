@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+:root {
+	--Soft-red: hsl(7, 99%, 70%);
+	--Yellow: hsl(51, 100%, 49%);
+	--Dark-desaturated-cyan: hsl(167, 40%, 24%);
+	--Dark-blue: hsl(198, 62%, 26%);
+	--Dark-moderate-cyan: hsl(168, 34%, 41%);
+
+	--Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+	--Very-dark-grayish-blue: hsl(213, 9%, 39%);
+	--Dark-grayish-blue: hsl(232, 10%, 55%);
+	--Grayish-blue: hsl(210, 4%, 67%);
+	--White: hsl(0, 0%, 100%);
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+
+	height: 100vh;
+	font-size: 18px;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav_links {
+	display: flex;
+	list-style: none;
+}
+
+.nav_links > li {
+	margin-left: 2em;
+
+	font-family: "Barlow";
+}
+
+.nav_links > li > a {
+	text-decoration: none;
+	color: white;
+
+	font-size: .65em;
+}
+
+.nav_links > li > .contact_button {
+	background-color: white;
+	padding: 1em 1.75em;
+
+	color: var(--Dark-blue);
+	border-radius: 40px;
+
+	font-family: "Fraunces";
+	text-transform: uppercase;
+
+	font-weight: 900;
+
+}
+
+.splash_page {
+	background-image: url('./images/desktop/image-header.jpg');
+	background-size: cover;
+	background-position: center;
+
+	height: 100vh;
+	padding: 1em 2em;
+}
+
+.intro_screen {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+}
+
+.intro_screen > h2 {
+	color: white;
+
+	font-family: "Fraunces";
+	font-weight: 700;
+
+	font-size: 3.5em;
+	text-transform: uppercase;
+	
+	letter-spacing: .1em;
+
+	margin: 2em 0 2.5em 0;
+}
+
