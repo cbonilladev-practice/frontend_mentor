@@ -26,72 +26,253 @@ html, body {
 	font-size: 18px;
 }
 
-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+h2, p, h3 {
+	margin: 0;
+	padding: 0;
 }
 
-.nav_links {
-	display: flex;
-	list-style: none;
-}
+.splash_page {
+	height: 100%;
+	width: 100%;
 
-.nav_links > li {
-	margin-left: 2em;
+	background-image: url('./images/desktop/image-header.jpg');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
 
 	font-family: "Barlow";
 }
 
-.nav_links > li > a {
+.navbar {
+	display: flex;
+
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 2em 3em;
+}
+
+.navbar > .nav_links {
+	display: flex;
+
+	list-style: none;
+	align-items: center;
+
+	justify-content: space-between;
+
+	margin: 0;
+	width: 35%;
+}
+
+.navbar > .nav_links > li {
+	font-size: .90em;
+}
+
+.navbar > .nav_links > li > a {
 	text-decoration: none;
 	color: white;
-
-	font-size: .65em;
 }
 
-.nav_links > li > .contact_button {
+.navbar > .sunnyside_logo {
+	width: 10em;
+}
+
+.navbar > .nav_links > li > .contact_button {
 	background-color: white;
-	padding: 1em 1.75em;
+	padding: 1.25em 2em;
 
-	color: var(--Dark-blue);
-	border-radius: 40px;
-
+	color: var(--Very-dark-desaturated-blue);
 	font-family: "Fraunces";
-	text-transform: uppercase;
-
+	font-size: .8em;
 	font-weight: 900;
 
-}
+	text-transform: uppercase;
 
-.splash_page {
-	background-image: url('./images/desktop/image-header.jpg');
-	background-size: cover;
-	background-position: center;
-
-	height: 100vh;
-	padding: 1em 2em;
+	border-radius: 30px;
 }
 
 .intro_screen {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	flex-direction: column;
+}
 
+.intro_screen > h2 {
+	font-family: "Fraunces";
+	font-weight: 900;
+	font-size: 3.5em;
+
+	letter-spacing: .1em;
+	text-transform: uppercase;
+
+	color: white;
+	margin: 2em 0 1.65em 0; 
+}
+
+/* .grid_card {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-flow: dense;
+
+	height: 75vh;
+}
+
+.card_information {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	
+	margin: 0 auto;
+	max-width: 29rem;
+
+	text-align: start;
+}
+
+.card_information > h2 {
+	font-family: "Fraunces";
+	font-weight: 900;
+	font-size: 2.75rem;
+
+	color: var(--Very-dark-desaturated-blue);
+}
+
+.card_information > p {
+	line-height: 1.75em;
+	font-size: 1.1em;
+	color: var(--Dark-grayish-blue);
+
+	font-family: "Barlow";
+
+	margin: 2rem 0 2rem 0;
+}
+
+.card_information > h3 {
+	font-family: "Fraunces";
+	font-size: 1em;
+	font-weight: 900;
+
+	text-transform: uppercase;
+}
+
+.card_image > img {
+	min-height: 100%;
+	min-width: 100%;
+}
+
+.card_information, .card_image {
+	width: 100%;	
+} */
+
+
+.grid_card, .grid_card_2, .grid_card_3 {
+	display: flex;
+	max-height: 75vh;
+}
+
+.grid_card_2 {
+	flex-direction: row-reverse;
+}
+
+.card_information, .card_image {
+	flex: 1;
+}
+
+.card_information {
+	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.intro_screen > h2 {
-	color: white;
-
-	font-family: "Fraunces";
-	font-weight: 700;
-
-	font-size: 3.5em;
-	text-transform: uppercase;
+div[class$="information_container"] {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 	
-	letter-spacing: .1em;
+	margin: 0 auto;
+	max-width: 28rem;
 
-	margin: 2em 0 2.5em 0;
+	text-align: start;
 }
 
+div[class$="information_container"] > h2 {
+	font-family: "Fraunces";
+	font-weight: 900;
+	font-size: 2.5rem;
+
+	color: var(--Very-dark-desaturated-blue);
+}
+
+div[class$="information_container"] > p {
+	line-height: 1.75em;
+	font-size: 1.1em;
+	color: var(--Dark-grayish-blue);
+
+	font-family: "Barlow";
+
+	margin: 2rem 0 2rem 0;
+}
+
+div[class$="information_container"] > a {
+	font-family: "Fraunces";
+	font-size: 1em;
+	font-weight: 900;
+
+	text-transform: uppercase;
+	color: var(--Very-dark-desaturated-blue);
+
+	position: relative;
+	align-self: flex-start;
+
+	padding: 0 .5em;
+}
+
+div[class$="information_container"] > a::after {
+	content: '';
+    z-index: -1;
+
+    width: 100%;
+    height: 0.5rem;
+    position: absolute;
+
+    left: 0;
+    top: 70%;
+
+    border-radius: 1rem;
+	/* background-color: hsl(51, 95%, 83%); */
+}
+
+div[class^="transform"] > a::after {
+	background-color: hsl(51, 95%, 83%);
+}
+
+div[class^="stand_out"] > a::after {
+	background-color: hsl(7, 91%, 91%);
+}
+
+.card_image > img {
+	width: 100%;
+	height: 100%;
+}
+
+.card_image {
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+}
+
+.graphic_design_text {
+	position: absolute;
+	z-index: 1;
+	text-align: center;
+
+	bottom: 0;
+
+	margin-bottom: 3em;
+	width: 19.5em;
+}
+
+.graphic_design_text > h2 {
+	margin-bottom: 1em;
+}
