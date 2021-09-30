@@ -83,12 +83,18 @@ h2, p, h3 {
 
 	color: var(--Very-dark-desaturated-blue);
 	font-family: "Fraunces";
-	font-size: .8em;
+	font-size: .85em;
 	font-weight: 900;
 
 	text-transform: uppercase;
 
 	border-radius: 30px;
+}
+
+.navbar > .nav_links > li > .contact_button:hover {
+	background-color: hsl(199, 100%, 75%);
+	color: white;
+	transition: .15s;
 }
 
 .intro_screen {
@@ -109,61 +115,6 @@ h2, p, h3 {
 	color: white;
 	margin: 2em 0 1.65em 0; 
 }
-
-/* .grid_card {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-auto-flow: dense;
-
-	height: 75vh;
-}
-
-.card_information {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	
-	margin: 0 auto;
-	max-width: 29rem;
-
-	text-align: start;
-}
-
-.card_information > h2 {
-	font-family: "Fraunces";
-	font-weight: 900;
-	font-size: 2.75rem;
-
-	color: var(--Very-dark-desaturated-blue);
-}
-
-.card_information > p {
-	line-height: 1.75em;
-	font-size: 1.1em;
-	color: var(--Dark-grayish-blue);
-
-	font-family: "Barlow";
-
-	margin: 2rem 0 2rem 0;
-}
-
-.card_information > h3 {
-	font-family: "Fraunces";
-	font-size: 1em;
-	font-weight: 900;
-
-	text-transform: uppercase;
-}
-
-.card_image > img {
-	min-height: 100%;
-	min-width: 100%;
-}
-
-.card_information, .card_image {
-	width: 100%;	
-} */
-
 
 .grid_card, .grid_card_2, .grid_card_3 {
 	display: flex;
@@ -189,7 +140,7 @@ div[class$="information_container"] {
 	flex-direction: column;
 	justify-content: center;
 	
-	margin: 0 auto;
+	margin: 0 7em;
 	max-width: 28rem;
 
 	text-align: start;
@@ -225,6 +176,7 @@ div[class$="information_container"] > a {
 	align-self: flex-start;
 
 	padding: 0 .5em;
+	cursor: pointer;
 }
 
 div[class$="information_container"] > a::after {
@@ -246,8 +198,20 @@ div[class^="transform"] > a::after {
 	background-color: hsl(51, 95%, 83%);
 }
 
+div[class^="transform"] > a:hover::after {
+	background-color: var(--Yellow);
+
+	transition: .15s;
+}
+
 div[class^="stand_out"] > a::after {
 	background-color: hsl(7, 91%, 91%);
+}
+
+div[class^="stand_out"] > a:hover::after {
+	background-color: var(--Soft-red);
+
+	transition: .15s;
 }
 
 .card_image > img {
@@ -262,17 +226,196 @@ div[class^="stand_out"] > a::after {
 	justify-content: center;
 }
 
-.graphic_design_text {
+.graphic_design_text, .photography_text {
 	position: absolute;
 	z-index: 1;
 	text-align: center;
 
 	bottom: 0;
 
-	margin-bottom: 3em;
-	width: 19.5em;
+	margin-bottom: 4em;
+	width: 22em;
 }
 
-.graphic_design_text > h2 {
-	margin-bottom: 1em;
+div[class$="_text"]  > h2 {
+	margin-bottom: .9em;
+	font-size: 1.75em;
+
+	font-family: "Fraunces";
 }
+
+div[class$="_text"]  > p {
+	font-family: "Barlow";
+
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+.graphic_design_text > * {
+	color: var(--Dark-desaturated-cyan);
+}
+
+.photography_text > * {
+	color: var(--Dark-blue);
+}
+
+.testimonials {
+	height: 97vh;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.testimonials > h2 {
+	margin-bottom: 5em;
+
+	text-transform: uppercase;
+	letter-spacing: .4em;
+	font-size: 1.1em;
+	color: var(--Dark-grayish-blue);
+
+	font-family: "Fraunces";
+}
+
+.testimonial_group {
+	display: flex;
+	width: 85%;
+}
+
+.single_testimonial {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	padding: 0 .5em 0 .5em;
+}
+
+.single_testimonial > img {
+	border-radius: 50%;
+	width: 3.5em;
+}
+
+.single_testimonial > p {
+	font-family: "Barlow";
+	color: var(--Very-dark-grayish-blue);
+
+	margin: 3em 0 4em 0;
+	line-height: 1.5em;
+	
+	text-align: center;
+	font-size: 1em;
+}
+
+.single_testimonial > .testimonial_name {
+	font-family: "Fraunces";
+}
+
+.single_testimonial > small {
+	font-family: "Barlow";
+	color: var(--Grayish-blue);
+
+	margin-top: 1em;
+}
+
+.footer {
+	max-height: 100vh;
+
+	background-color: hsl(168, 57%, 72%);
+	
+	display: flex;
+	flex-direction: column;
+}
+
+.footer > .image_banner {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 1fr;
+
+	width: 100%;
+	/* height: 60vh; */
+}
+
+.footer > .image_banner > img {
+	width: 100%;
+}
+
+.banner_information {
+	width: 100%;
+	height: 40vh;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/* .banner_information > .colored_logo {
+	align-self: center;
+	
+	margin-bottom: 2em;
+} */
+
+/* .banner_information > .colored_logo > svg > path {
+	fill: rgb(45, 118, 104);
+} */
+
+.logo_footer {
+	align-self: center;
+	width: 9em;
+
+	margin-bottom: 2em;
+}
+
+.footer_nav {
+	width: 20em;
+	display: flex;
+	justify-content: space-between;
+
+	font-family: "Barlow";
+	color: var(--Dark-moderate-cyan);
+}
+
+.banner_information > .footer_nav {
+	align-self: center;
+
+	display: flex;
+	margin-bottom: 4em;
+}
+
+.banner_information > .footer_nav > *:hover {
+	color: white;
+
+	cursor: pointer;
+	transition: .15s;
+}
+
+.banner_information > .footer_links {
+	align-self: center;
+	display: flex;
+	justify-content: space-between;
+
+	width: 9em;
+}
+
+.banner_information > .footer_links > svg:hover > path {
+	fill: white;
+
+	transition: .15s;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {};
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {};
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {};
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {};
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {};
