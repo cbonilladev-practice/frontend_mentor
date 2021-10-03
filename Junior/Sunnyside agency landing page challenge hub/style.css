@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
-
 :root {
 	--Soft-red: hsl(7, 99%, 70%);
 	--Yellow: hsl(51, 100%, 49%);
 	--Dark-desaturated-cyan: hsl(167, 40%, 24%);
 	--Dark-blue: hsl(198, 62%, 26%);
 	--Dark-moderate-cyan: hsl(168, 34%, 41%);
-
 	--Very-dark-desaturated-blue: hsl(212, 27%, 19%);
 	--Very-dark-grayish-blue: hsl(213, 9%, 39%);
 	--Dark-grayish-blue: hsl(232, 10%, 55%);
@@ -21,7 +19,6 @@
 html, body {
 	padding: 0;
 	margin: 0;
-
 	height: 100vh;
 	font-size: 18px;
 }
@@ -34,64 +31,58 @@ h2, p, h3 {
 .splash_page {
 	height: 100vh;
 	width: 100%;
-
 	background-image: url('./images/desktop/image-header.jpg');
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-
 	font-family: "Barlow";
 }
 
 .navbar {
 	display: flex;
-
 	align-items: center;
 	justify-content: space-between;
-
 	padding: 2em 3em;
 }
 
-.navbar > .nav_links {
-	display: flex;
+.hamburger {
+	display: none;
+}
 
+.navbar>.nav_links {
+	display: flex;
 	list-style: none;
 	align-items: center;
-
 	justify-content: space-between;
-
 	margin: 0;
 	width: 35%;
 }
 
-.navbar > .nav_links > li {
+.navbar>.nav_links>li {
 	font-size: .90em;
 }
 
-.navbar > .nav_links > li > a {
+.navbar>.nav_links>li>a {
 	text-decoration: none;
 	color: white;
 }
 
-.navbar > .sunnyside_logo {
+.navbar>.sunnyside_logo {
 	width: 10em;
 }
 
-.navbar > .nav_links > li > .contact_button {
+.navbar>.nav_links>li>.contact_button {
 	background-color: white;
 	padding: 1.25em 2em;
-
 	color: var(--Very-dark-desaturated-blue);
 	font-family: "Fraunces";
-	font-size: .85em;
+	font-size: .95em;
 	font-weight: 900;
-
 	text-transform: uppercase;
-
 	border-radius: 30px;
 }
 
-.navbar > .nav_links > li > .contact_button:hover {
+.navbar>.nav_links>li>.contact_button:hover {
 	background-color: hsl(199, 100%, 75%);
 	color: white;
 	transition: .15s;
@@ -104,16 +95,14 @@ h2, p, h3 {
 	flex-direction: column;
 }
 
-.intro_screen > h2 {
+.intro_screen>h2 {
 	font-family: "Fraunces";
 	font-weight: 900;
 	font-size: 3.5em;
-
 	letter-spacing: .1em;
 	text-transform: uppercase;
-
 	color: white;
-	margin: 2em 0 1.65em 0; 
+	margin: 2em 0 1.65em 0;
 }
 
 .grid_card, .grid_card_2, .grid_card_3 {
@@ -129,6 +118,14 @@ h2, p, h3 {
 	flex: 1;
 }
 
+.mobile_image_transform, .mobile_image_stand_out {
+	display: none;
+}
+
+.mobile_image_graphic_design, .mobile_image_photography {
+	display: none;
+}
+
 .card_information {
 	display: flex;
 	justify-content: center;
@@ -139,88 +136,74 @@ div[class$="information_container"] {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	
 	max-width: 22rem;
-
 	text-align: start;
 }
 
-div[class$="information_container"] > h2 {
+div[class$="information_container"]>h2 {
 	font-family: "Fraunces";
 	font-weight: 900;
 	font-size: 2.5rem;
-
 	color: var(--Very-dark-desaturated-blue);
 }
 
-div[class$="information_container"] > p {
+div[class$="information_container"]>p {
 	line-height: 1.75em;
 	font-size: 1.1em;
 	color: var(--Dark-grayish-blue);
-
 	font-family: "Barlow";
-
 	margin: 2rem 0 2rem 0;
 }
 
-div[class$="information_container"] > a {
+div[class$="information_container"]>a {
 	font-family: "Fraunces";
 	font-size: 1em;
 	font-weight: 900;
-
 	text-transform: uppercase;
 	color: var(--Very-dark-desaturated-blue);
-
 	position: relative;
 	align-self: flex-start;
-
 	padding: 0 .5em;
 	cursor: pointer;
 }
 
-div[class$="information_container"] > a::after {
+div[class$="information_container"]>a::after {
 	content: '';
-    z-index: -1;
-
-    width: 100%;
-    height: 0.5rem;
-    position: absolute;
-
-    left: 0;
-    top: 70%;
-
-    border-radius: 1rem;
+	z-index: -1;
+	width: 100%;
+	height: 0.5rem;
+	position: absolute;
+	left: 0;
+	top: 70%;
+	border-radius: 1rem;
 	/* background-color: hsl(51, 95%, 83%); */
 }
 
-div[class^="transform"] > a::after {
+div[class^="transform"]>a::after {
 	background-color: hsl(51, 95%, 83%);
 }
 
-div[class^="transform"] > a:hover::after {
+div[class^="transform"]>a:hover::after {
 	background-color: var(--Yellow);
-
 	transition: .15s;
 }
 
-div[class^="stand_out"] > a::after {
+div[class^="stand_out"]>a::after {
 	background-color: hsl(7, 91%, 91%);
 }
 
-div[class^="stand_out"] > a:hover::after {
+div[class^="stand_out"]>a:hover::after {
 	background-color: var(--Soft-red);
-
 	transition: .15s;
 }
 
-.card_image > img {
+.card_image>img {
 	width: 100%;
 	height: 100%;
 }
 
 .card_image {
 	position: relative;
-
 	display: flex;
 	justify-content: center;
 }
@@ -229,54 +212,47 @@ div[class^="stand_out"] > a:hover::after {
 	position: absolute;
 	z-index: 1;
 	text-align: center;
-
 	bottom: 0;
-
 	margin-bottom: 5em;
 	width: 22em;
 }
 
-div[class$="_text"]  > h2 {
+div[class$="_text"]>h2 {
 	margin-bottom: .8em;
 	font-size: 1.75em;
-
 	font-weight: 900;
 	font-family: "Fraunces";
 }
 
-div[class$="_text"]  > p {
+div[class$="_text"]>p {
 	font-family: "Barlow";
-
 	font-size: 1em;
 	line-height: 1.65em;
 }
 
-.graphic_design_text > * {
+.graphic_design_text>* {
 	color: var(--Dark-desaturated-cyan);
 }
 
-.photography_text > * {
+.photography_text>* {
 	color: var(--Dark-blue);
 }
 
 .testimonials {
 	/* height: 97vh; */
 	margin: 10em 0 10em 0;
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 
-.testimonials > h2 {
+.testimonials>h2 {
 	margin-bottom: 5em;
-
 	text-transform: uppercase;
 	letter-spacing: .4em;
 	font-size: 1.1em;
 	color: var(--Dark-grayish-blue);
-
 	font-family: "Fraunces";
 }
 
@@ -290,75 +266,69 @@ div[class$="_text"]  > p {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-
 	padding: 0 .75em 0 .75em;
 }
 
-.single_testimonial > img {
+.single_testimonial>img {
 	border-radius: 50%;
 	width: 3.5em;
 }
 
-.single_testimonial > p {
+.single_testimonial>p {
 	font-family: "Barlow";
 	color: var(--Very-dark-grayish-blue);
-
 	margin: 3em 0 4em 0;
 	line-height: 1.5em;
-	
 	text-align: center;
 	font-size: 1em;
 }
 
-.single_testimonial > .testimonial_name {
+.single_testimonial>.testimonial_name {
 	font-family: "Fraunces";
 }
 
-.single_testimonial > small {
+.single_testimonial>small {
 	font-family: "Barlow";
 	color: var(--Grayish-blue);
-
 	margin-top: 1em;
 }
 
 .footer {
 	/* max-height: 100vh; */
-
 	background-color: hsl(168, 57%, 72%);
-	
 	display: flex;
 	flex-direction: column;
 }
 
-.footer > .image_banner {
+.footer>.image_banner {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: 1fr;
-
 	width: 100%;
 	/* margin: 1em 0 1em 0; */
 	/* height: 60vh; */
 }
 
-.footer > .image_banner > img {
+.footer>.image_banner>img {
 	width: 100%;
+}
+
+.mobile_image_banner {
+	display: none;
 }
 
 .banner_information {
 	width: 100%;
 	/* height: 40vh; */
-	
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	
 	margin: 5em 0 5em 0;
 }
 
 .logo_footer {
 	align-self: center;
 	width: 9em;
-
 	margin-bottom: 2.5em;
 }
 
@@ -366,109 +336,90 @@ div[class$="_text"]  > p {
 	width: 20em;
 	display: flex;
 	justify-content: space-between;
-
 	font-family: "Barlow";
 	color: var(--Dark-moderate-cyan);
 }
 
-.banner_information > .footer_nav {
+.banner_information>.footer_nav {
 	align-self: center;
-
 	display: flex;
 	margin-bottom: 5em;
 }
 
-.banner_information > .footer_nav > *:hover {
+.banner_information>.footer_nav>*:hover {
 	color: white;
-
 	cursor: pointer;
 	transition: .15s;
 }
 
-.banner_information > .footer_links {
+.banner_information>.footer_links {
 	align-self: center;
 	display: flex;
 	justify-content: space-between;
-
 	width: 9em;
 	cursor: pointer;
 }
 
-.banner_information > .footer_links > svg:hover > path {
+.banner_information>.footer_links>svg:hover>path {
 	fill: white;
-
 	transition: .15s;
 }
 
 @media (max-width: 1440px) {
-	.intro_screen > h2 {
+	.intro_screen>h2 {
 		font-size: 3em;
 		margin: 2.5em 0 2em 0;
 	}
-
 	.graphic_design_text, .photography_text {
 		margin-bottom: 3em;
 	}
-
-	div[class$="_text"]  > h2 {
+	div[class$="_text"]>h2 {
 		font-size: 1.5em;
 	}
-	
-	div[class$="_text"]  > p {
+	div[class$="_text"]>p {
 		font-size: 1em;
 	}
-
 	div[class$="information_container"] {
 		max-width: 23em;
 	}
-
-	div[class$="information_container"] > h2 {
+	div[class$="information_container"]>h2 {
 		font-size: 2em;
 	}
-	
-	div[class$="information_container"] > p {
+	div[class$="information_container"]>p {
 		font-size: .9em;
 		line-height: 1.5em;
 	}
-	
-	div[class$="information_container"] > a {
+	div[class$="information_container"]>a {
 		font-size: .9em;
 	}
-
 	.testimonial_group {
 		width: 85vw;
 	}
 }
 
 @media (max-width: 1200px) {
-	.navbar > .nav_links {
+	.navbar>.nav_links {
 		width: 55%;
 	}
-	
 	.graphic_design_text, .photography_text {
 		margin-bottom: 1.5em;
 		width: 20em;
 	}
-
-	div[class$="_text"]  > h2 {
+	div[class$="_text"]>h2 {
 		font-size: 1.25em;
 		margin-bottom: .25em;
 	}
-	
-	div[class$="_text"]  > p {
+	div[class$="_text"]>p {
 		font-size: .9em;
 		line-height: 1.3em;
 	}
-
 	.testimonials {
 		margin: 7em 0 7em 0;
 	}
-
-	.testimonials > h2 {
+	.testimonials>h2 {
 		font-size: 1em;
 	}
-
-	.single_testimonial > p {
+	.single_testimonial>p {
 		font-size: .9em;
 		margin: 2em 0 3em 0;
 	}
@@ -478,46 +429,36 @@ div[class$="_text"]  > p {
 	div[class$="information_container"] {
 		max-width: 17em;
 	}
-
-	div[class$="information_container"] > h2 {
+	div[class$="information_container"]>h2 {
 		font-size: 1.65em;
 	}
-	
-	div[class$="information_container"] > p {
+	div[class$="information_container"]>p {
 		font-size: .8em;
 		line-height: 1.5em;
 	}
-	
-	div[class$="information_container"] > a {
+	div[class$="information_container"]>a {
 		font-size: .8em;
 	}
-
 	.graphic_design_text, .photography_text {
 		margin-bottom: 1.5em;
 		width: 19em;
 	}
-
 	.testimonials {
 		margin: 5em 0 5em 0;
 	}
-
-	.testimonials > h2 {
+	.testimonials>h2 {
 		font-size: .9em;
 	}
-
 	.testimonial_group {
 		width: 95vw;
 	}
-
-	.single_testimonial > .testimonial_name {
+	.single_testimonial>.testimonial_name {
 		font-size: 1.1em;
 	}
-	
-	.single_testimonial > small {
+	.single_testimonial>small {
 		font-size: .75em;
 	}
-
-	.single_testimonial > p {
+	.single_testimonial>p {
 		font-size: .8em;
 		margin: 2em 0 3em 0;
 		line-height: 1.5em;
@@ -525,19 +466,156 @@ div[class$="_text"]  > p {
 }
 
 @media (max-width: 720px) {
-	.grid_card, .grid_card_2, .grid_card_3 {
-		flex-direction: column-reverse;
+	.splash_page {
+		background-image: url('./images/mobile/image-header.jpg');
+		height: 80vh;
 	}
-
-	.navbar > .nav_links {
+	header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.navbar {
+		padding: 2em 0;
+		width: 90%;
+		margin: 0;
+	}
+	.navbar>.sunnyside_logo {
+		width: 8em;
+	}
+	.navbar>.nav_links.hide {
 		display: none;
 	}
 
-	.intro_screen > h2 {
-		font-size: 1em;
+	.navbar>.nav_links.show {
+		position: absolute;
+		flex-direction: column;
+		top: 6.5em;
+		left: 50%;
+		transform: translateX(-50%);
+		align-self: center;
+		width: 100%;
+		padding: 0;
+		background-color: white;
+		padding: 2em;
 	}
 
+	.navbar>.nav_links::after {
+		content: '';
+		border: 15px solid hsl(30, 100%, 99%);
+		border-top: 15px solid transparent;
+		border-left: 15px solid transparent;
+		position: absolute;
+		right: 0;
+		top: -1.5rem;
+	}
+	.navbar>.nav_links>* {
+		padding-bottom: 2.5em;
+	}
+	.navbar>.nav_links>li>a {
+		color: var(--Dark-grayish-blue);
+		font-size: 1.25em;
+	}
+	.navbar>.nav_links>li:last-child {
+		margin-top: 1em;
+	}
+	.navbar>.nav_links>li>.contact_button {
+		background-color: var(--Yellow);
+		color: var(--Dark-desaturated-cyan);
+	}
+	.grid_card, .grid_card_2, .grid_card_3 {
+		flex-direction: column-reverse;
+	}
+	.mobile_image_transform, .mobile_image_stand_out {
+		display: block;
+	}
+	.desktop_image_transform, .desktop_image_stand_out {
+		display: none;
+	}
+	.desktop_image_graphic_design, .desktop_image_photography {
+		display: none;
+	}
+	.mobile_image_graphic_design, .mobile_image_photography {
+		display: block;
+	}
+	.intro_screen>h2 {
+		font-size: 2.5em;
+		text-align: center;
+		margin: 2em 0 1.5em 0;
+	}
+	.hamburger {
+		display: block;
+	}
 	.testimonial_group {
 		flex-direction: column;
+	}
+	.footer>.image_banner {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		width: 100%;
+	}
+	div[class$="information_container"] {
+		max-width: 18em;
+		margin: 3em 0 3em 0;
+	}
+	div[class$="information_container"]>h2 {
+		text-align: center;
+	}
+	div[class$="information_container"]>p {
+		font-size: 1em;
+		text-align: center;
+	}
+	div[class$="information_container"]>a {
+		font-size: .9em;
+		text-align: center;
+		align-self: center;
+	}
+	.testimonials {
+		margin: 4em 0 2em 0;
+	}
+	.testimonials>h2 {
+		letter-spacing: .3em;
+		margin-bottom: 4em;
+	}
+	.testimonial_group {
+		width: 90vw;
+	}
+	.single_testimonial {
+		margin-bottom: 4em;
+	}
+	.single_testimonial>p {
+		font-size: 1em;
+		line-height: 1.75em;
+		margin: 1.75em 0 1.75em 0;
+	}
+	.footer_nav {
+		width: 17em;
+	}
+	.logo_footer {
+		width: 10em;
+	}
+	.banner_information {
+		margin: 4em 0 5em 0;
+	}
+	.graphic_design_text, .photography_text {
+		margin-bottom: 3.5em;
+	}
+	div[class$="_text"]>h2 {
+		font-size: 1.65em;
+		margin-bottom: 1em;
+	}
+	div[class$="_text"]>p {
+		font-size: .9em;
+		line-height: 1.75em;
+	}
+	.desktop_image_banner {
+		display: none;
+	}
+	.mobile_image_banner {
+		display: block;
+	}
+	.navbar {
+		position: relative;
 	}
 }
